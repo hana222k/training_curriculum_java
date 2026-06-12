@@ -66,9 +66,20 @@ public class CalendarsController {
           }
       }
 
+<<<<<<< Updated upstream
       day_map.put("month", currentDate.getMonthValue());
       day_map.put("date", currentDate.getDayOfMonth());
       day_map.put("plans", todayPlans);
+=======
+      // 曜日番号を計算
+      dayMap.put("month", currentDate.getMonthValue());
+      int wdayNum = (todaysDate.getDayOfWeek().getValue() + x) % 7 ;
+
+      dayMap.put("month", currentDate.getMonthValue());
+      dayMap.put("date", currentDate.getDayOfMonth());
+      dayMap.put("plans", todayPlans);
+      dayMap.put("wday", wdays[wdayNum]);
+>>>>>>> Stashed changes
 
       weekDays.add(day_map);
     }
